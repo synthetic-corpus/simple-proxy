@@ -5,10 +5,10 @@
       labels: 
         service: reverse-proxy
       name: reverse-proxy-service
-    specs: 
+    spec: 
       ports: 
         - 
-          name: "80:80"
+          name: "8080"
           port: 8080
           targetPort: 8080
       selector: 
