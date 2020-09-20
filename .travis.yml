@@ -3,10 +3,10 @@ language: node_js
 node_js:
   - 13
 
-  branches:
-    only:
-    - master
-    - staging
+branches:
+  only:
+  - master
+  - staging
 
 services:
   - docker
@@ -27,4 +27,3 @@ script:
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push gonzaga626/simple-proxy
-
