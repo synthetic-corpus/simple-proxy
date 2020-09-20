@@ -22,7 +22,7 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker build -t simple-proxy .
-  - docker tag simple-express gonzaga626/simple-proxy:latest
+  - docker tag simple-proxy gonzaga626/simple-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
